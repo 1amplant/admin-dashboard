@@ -29,8 +29,9 @@ a {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr minmax(200px, 6fr);
+    grid-template-rows: 1fr 6fr;
+    min-height: 150vh;
 
 }
 
@@ -42,6 +43,9 @@ a {
     grid-template-rows: 1fr 1fr;
     font-weight: bold;
     font-size: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    gap: 10px;
     
 }
 
@@ -111,6 +115,7 @@ a {
     grid-template-columns: 1fr 10fr;
     align-items: center;
     margin-left: 10px;
+    margin-top: 10px;
     gap: 10px;
 }
 
@@ -133,20 +138,56 @@ a {
 .content {
     border: solid;
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     background-color: rgb(243, 235, 235);
+    padding-top: 30px;
+    padding-left: 20px;
+
 }
 
 .content > .trending {
     grid-column: 2 / 3;
 }
 
-.content > .projects {
+.content > .projects > .cards {
+    grid-column: 1 / 2;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    gap:10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap:20px;
+    
+}
+.projects > .title {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.content > .projects > .cards > .card {
+    background-color: white;
+    border-radius: 8px;
+    border-left: 7px solid rgb(16, 118, 165);
+    height:200px;
+    padding-left: 20px;
+    padding-top: 30px;
+    padding-right: 20px;
+    display: grid;
+    gap:30px
+}
+
+.card > .card-content {
+    width: 90%;
+    display: grid;
+
+}
+
+.card > .card-icons {
+    display: grid;
+    justify-self: end;
+    grid-template-columns: repeat(3, minmax(30px, 40px));
+}
+
+
+.content > .announcements >.options {
+    grid-column: 2 / 3;
 }
 
 .projects > .title {

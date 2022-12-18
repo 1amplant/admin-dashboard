@@ -142,12 +142,10 @@ a {
     background-color: rgb(243, 235, 235);
     padding-top: 30px;
     padding-left: 20px;
+    gap:20px;
 
 }
 
-.content > .trending {
-    grid-column: 2 / 3;
-}
 
 .content > .projects > .cards {
     grid-column: 1 / 2;
@@ -186,13 +184,35 @@ a {
 }
 
 
-.content > .announcements >.options {
-    grid-column: 2 / 3;
-}
-
 .projects > .title {
     grid-column: 1 / 3;
 }
+
+.content > .article {
+    display: grid;
+    grid-template-rows: min-content;
+    padding-right: 20px;
+    font-size: 14px;
+    gap:40px
+}
+
+.announcement > .title, .trending > .title {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.announcement > .options {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.options > div {
+    font-weight: bold;
+}
+    
+
+
 
 .icon {
     height:20px;
@@ -202,6 +222,11 @@ a {
 .avatar {
     height:45px;
     width:auto;
+}
+
+.solid {
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .search-bar > #search-input {

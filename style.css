@@ -146,7 +146,6 @@ a {
 
 }
 
-
 .content > .projects > .cards {
     grid-column: 1 / 2;
     display: grid;
@@ -207,13 +206,26 @@ a {
     padding: 30px;
 }
 
-.options > div {
+.trending > .trend {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 20px;
+    
+}
+
+.trending > .trend > * {
+    align-self: center;
+}
+
+.options > div, .trend > p > span {
     font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
 }
     
-
-
-
 .icon {
     height:20px;
     width:auto;
